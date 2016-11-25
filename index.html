@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/CSS/master.css" media="screen">
+    <title>Pixel Art Maker</title>
+    <script defer src="assets/index.js" charset="utf-8"></script>
+    <link href="https://fonts.googleapis.com/css?family=Bitter:400,700" rel="stylesheet">
+  </head>
+  <body>
+    <header class="container banner">
+      <h1>Pixel Art Maker</h1>
+      <h3>Make your very own pixel art!</h3>
+    </header>
+    <main class="container">
+      <div class="instructions">
+        <h5>Instructions</h5>
+        <ol>
+          <li>Please enter the number of columns and rows to generate the grid.</li>
+          <li>Click on a color from the palette below, or click on the custom color box to pick out a color.</li>
+          <li>When ready, place the color in the grid by clicking on the target area. <br>(Tip: you can cover multiple cells by clicking and dragging over the desired area.)</li>
+          <li>Press SHIFT and click to <u>undo</u>.</li>
+          <li>Press ALT/OPTION to apply <u>overlay blending</u> of colors.</li>
+        </ol>
+      </div>
+      <form id="grid-reset-form">
+        <label for="grid-x">Columns: </label>
+        <input type="number" id="grid-x" name="grid-x" value="" placeholder="(max: 60)">
+        <label for="grid-y">Rows: </label>
+        <input type="number" id="grid-y" name="grid-y" value="" placeholder="(max: 100)">
+        <button type="submit" id="grid-setup">Reset Grid</button>
+      </form>
+      <div id="grid">
+      </div>
+      <div id="palette" class="bar">
+        <div class="palette-color red"></div>
+        <div class="palette-color orangered"></div>
+        <div class="palette-color orange"></div>
+        <div class="palette-color gold"></div>
+        <div class="palette-color yellow"></div>
+        <div class="palette-color limegreen"></div>
+        <div class="palette-color green"></div>
+        <div class="palette-color teal"></div>
+        <div class="palette-color blue"></div>
+        <div class="palette-color navy"></div>
+        <div class="palette-color blueviolet"></div>
+        <div class="palette-color purple"></div>
+        <div class="palette-color indigo"></div>
+        <div class="palette-color magenta"></div>
+        <div class="palette-color white"></div>
+        <div class="palette-color grey"></div>
+        <div class="palette-color black"></div>
+      </div>
+      <div class="bar low-bar">
+        <div class="low-bar-content">
+          <p>Custom color:</p>
+          <input id="color-input" type="color">
+        </div>
+        <div class="low-bar-content">
+          <input type="checkbox" id="grid-toggle" checked>
+          <label for="grid-toggle">Toggle grid</label>
+        </div>
+        <div class="low-bar-content">
+          <p>Current color:</p>
+          <div id="current-color-box" class="box">
+          </div>
+        </div>
+      </div>
+    </main>
+    <div id="brush"></div>
+    <footer class="container">
+      <p>
+        Not enabled for touch devices; please access on a system with dedicated mouse/trackpad support. User experience may vary depending on browser and platform.
+      </p>
+      <small>&copy; Brian Lee 2016</small>
+    </footer>
+  </body>
+</html>
